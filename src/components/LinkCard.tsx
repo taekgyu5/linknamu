@@ -13,8 +13,9 @@ export default function LinkCard({ link }: { link: LinkItem }) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={recordClick}
-      className="flex w-full items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 py-4 text-sm font-medium text-zinc-800 shadow-sm transition-colors hover:bg-zinc-50 active:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800"
+      className="flex w-full items-center justify-center gap-2 rounded-2xl border border-white/60 bg-white/40 px-5 py-4 text-sm font-medium text-[var(--foreground)] shadow-[0_4px_16px_-4px_rgba(180,120,50,0.2)] backdrop-blur-md transition-all duration-200 hover:bg-white/60 hover:shadow-[0_6px_20px_-4px_rgba(180,120,50,0.28)] active:bg-white/70"
     >
+      {link.icon && <span aria-hidden>{link.icon}</span>}
       {link.label}
     </a>
   );

@@ -2,6 +2,7 @@ export interface LinkItem {
   id: string;
   label: string;
   url: string;
+  icon?: string;
 }
 
 export interface Profile {
